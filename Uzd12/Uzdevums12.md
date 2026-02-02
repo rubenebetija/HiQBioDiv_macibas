@@ -3,7 +3,7 @@ Divpadsmitais uzdevums: sugas izplatības modelēšana
 
 ## Termiņš
 
-Līdz **2025-11-19**, izmantojot
+Uzdevuma pirmajai daļai līdz **2025-11-19**, izmantojot
 [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
 un [pull
 request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
@@ -15,6 +15,16 @@ Ja ir vēlme dokumentu gatavot, [izmantojot
 R](https://rstudio.github.io/visual-markdown-editing/citations.html),
 pievienojiet arī atsauču ģenerēšanai nepieciešamos failus (parasti - bib
 un csl), izmantojiet Hārvardas stilu atsauču noformēšanai.
+
+Uzdevuma otrajai daļai līdz **2026-02-06**, izmantojot
+[fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+un [pull
+request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+uz zaru “Dalibnieki”, šī uzdevuma direktorijā pievienojot .Rmd vai .qmd
+faila izveidotu .html izdruku, kuras nosaukums ir
+Uzd12\_\[JusuUzvards\], piemēram, `Uzd12_Avotins.html`, kurā salīdzināti
+izveidotie modeļi, sniegts skaidrojums kopīgajam un atšķirīgajam, un
+izdarīta izvēle labākajam.
 
 ## Premise
 
@@ -156,6 +166,8 @@ entropijas analīzi.
 
 ## Uzdevums
 
+### Pirmā daļa - teorija
+
 Iepazīstieties ar literatūru un piemēriem sugu izplatības modelēšanā. Ir
 dažādi aspekti, kurus ņemt vērā, izvēloties datu analīzes metodi. Šajā
 projektā mēs izmantosim maksimuma entropijas analīzi. Kā jebkurai datu
@@ -198,9 +210,9 @@ metodes un kā tas saistās ar fona un klātbūtnes vietām?
 hiperparametri/maināmie iestatījumi, kāda ir to nozīme, kurā brīdī tos
 mainīt - jebkurai pazīmju un parametru kombinācijai vai tikai daļai?
 
-**Modeļa kvalitātes metrikas: Vita** Kādas metrikas tiek izmantotas
-sugu izplatības modeļu izvērtēšanai, ko tās nozīmē un kādi ir to
-ierobežojumi tikai klātbūtnes modeļos? Kuras metrikas rēķina katrai no
+**Modeļa kvalitātes metrikas: Vita** Kādas metrikas tiek izmantotas sugu
+izplatības modeļu izvērtēšanai, ko tās nozīmē un kādi ir to ierobežojumi
+tikai klātbūtnes modeļos? Kuras metrikas rēķina katrai no
 apmācību-validācijas-testēšanas kopām?
 
 **Nulles modeļi: Jekaterīna** Kas ir nulles modeļi, kam tos izmanto sugu
@@ -210,3 +222,48 @@ apmācību-validēšanas-testēšanas kopām?
 **EGV izvēle: Raitis** Kādas ir esošās pieejas MaxEnt EGV izvēlei, vai
 un kādas pieejas drīkst izmantot no klasiskajām klātbūtnes-iztrūkuma
 metodēm?
+
+### Otrā daļa - prakse
+
+Izmantojot projekta *sharepoint* direktorijās
+“WP2_macibas/00_HPCrotalas” un “WP2_darbi/SuguIzplatibasModeli” sniegtos
+piemērus, izstrādājiet sekojošo uzdevumu vienai sevis brīvi izvēlētai
+sugai:
+
+1.  Sagatavojiet astoņus modeļus ar atšķirīgu piepūles kontroli:
+
+- bez piepūles noviržu kontroles (1. modelis);
+
+- ar telpisko retināšanu, saglabājot vienu novērojumu ik 1 km šūnā, bet
+  bez citas kontroles (2. modelis);
+
+- bez telpiskās retināšanas, viens kopīgs piepūles noviržu kontroles
+  slānis vienādi izmantojot visas sugas (ar vai bez ES aizsargājamajiem
+  biotopiem); ar apakšvariantiem:
+
+  - bez apakšgala limitācijas (3. modelis);
+
+  - apakšgalu limitējot 10% no slāņa vidējās vērtības (4. modelis);
+
+  - apakšgalu limitējot pie slāņa vidējās vērtības (5. modelis).
+
+- bez telpiskās retināšanas, piepūles noviržu kontroles slāņa no sugām
+  atkarīgo daļu veidojot ar sezonālo reģistrāciju pārklāšanās svarošanu;
+  ar apakšvariantiem:
+
+  - bez apakšgala limitācijas (6. modelis);
+
+  - apakšgalu limitējot 10% no slāņa vidējās vērtības (7. modelis);
+
+  - apakšgalu limitējot pie slāņa vidējās vērtības (8. modelis).
+
+2.  Salīdziniet iegūtos rezultātus, ņemot vērā visos referātos iekļauto
+    un diskutēto. Ivēlieties labāko modeli, argumentējiet savu izvēli.
+    Vai atbildes funkcijās ir kādas ekoloģiski neloģiskas saistības vai
+    kādi EGV, kas sabojā dzīvotņu piemērotības projekciju?
+
+3.  Atkārtojiet labāko modeli, izslēdzot neloģiskos EGV (papildus
+    devītais modelis).
+
+Darbs veicams HPC `home/hiqbiodiv/TestingScripts/VardsUzvards` ar sevis
+izveidotu struktūru. Esiet uzmanīgi ar failu ceļiem.
